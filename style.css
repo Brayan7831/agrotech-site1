@@ -1,62 +1,33 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
+.produtos{
+    padding:50px;
 }
 
-header{
-    background:#2E7D32;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
-.hero img{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-}
-
-section{
-    padding:40px;
-    text-align:center;
-}
-
-.cards{
-    display:flex;
-    justify-content:center;
+.grid-produtos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
-    flex-wrap:wrap;
 }
 
-.card{
+.produto{
     background:white;
-    width:250px;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius:12px;
+    padding:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
-canvas{
-    max-width:800px;
-    margin:auto;
-}
-
-.galeria{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.galeria img{
-    width:300px;
+.produto img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
     border-radius:10px;
 }
 
-footer{
+.produto button{
+    width:100%;
     background:#2E7D32;
     color:white;
-    text-align:center;
-    padding:20px;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
 }
