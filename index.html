@@ -4,16 +4,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgroTech Brasil</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-<h1>🌱 AgroTech Brasil</h1>
+<header>
+    <h1>🌱 AgroTech Brasil</h1>
+    <p>Tecnologia aplicada ao agronegócio</p>
+</header>
 
-<p>
-Tecnologia e inovação para o agronegócio.
-</p>
+<section class="hero">
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200" alt="Plantação">
+</section>
 
-<script src="script.js"></script>
+<section>
+    <h2>Sobre o Projeto</h2>
+    <p>
+        A agricultura moderna utiliza drones, inteligência artificial,
+        sensores IoT e análise de dados para aumentar a produtividade.
+    </p>
+</section>
+
+<section>
+    <h2>Tecnologias Utilizadas</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🚁 Drones</h3>
+            <p>Monitoramento de plantações.</p>
+        </div>
+
+        <div class="card">
+            <h3>📡 Sensores IoT</h3>
+            <p>Controle de umidade e temperatura.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 Inteligência Artificial</h3>
+            <p>Previsão de produtividade.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Produtividade da Fazenda</h2>
+
+    <canvas id="grafico"></canvas>
+</section>
+
+<section>
+    <h2>Galeria</h2>
+
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500">
+        <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=500">
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 AgroTech Brasil</p>
+</footer>
+
+<script>
+const ctx = document.getElementById('grafico');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Milho', 'Soja', 'Trigo', 'Café'],
+        datasets: [{
+            label: 'Produção (toneladas)',
+            data: [120, 190, 90, 150],
+            backgroundColor: [
+                '#4CAF50',
+                '#2E7D32',
+                '#81C784',
+                '#66BB6A'
+            ]
+        }]
+    }
+});
+</script>
+
 </body>
 </html>
